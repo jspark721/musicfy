@@ -1,0 +1,118 @@
+/*colors */
+:root {
+    --beige:     #fce5dd;
+    --lightgray: #DDD6DD;
+    --pink:      #F0BABA;
+    --blue:      #93B0D2;
+    --pastelblue:#B3B5CE;
+    --darkblue:  #7B86A6;
+    --purple:    #A498AC;
+}
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Lato';
+    color: white;
+    min-height: 100%;
+}
+
+body.homepage {
+    background-color: var(--pastelblue);
+}
+
+.navbar {
+    padding: 0.5rem;
+    background-color: var(--pastelblue);
+}
+
+.navbar .logo {
+    position: relative;
+    left: 2rem;
+    width: 55px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.hero-content {
+    position: relative;
+    min-height: 480px;
+    background-image: url(../assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content .hero-title {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px var(--darkblue);
+}
+.hero-content .hero-subtitle {
+    text-align: center;
+    width: 80%;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    text-shadow: 1px 1px 0px var(--darkblue);
+}
+
+.desc-container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    padding: 1rem 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.desc {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+}
+
+.desc h5 {
+    font-size: 1.05rem;
+    text-transform: lowercase;
+}
+
+.desc span {
+    color: var(--beige);
+    font-size: 2.7rem;
+}
+
+
+/* medium and small screens */
+
+@media (min-width: 640px) {
+    html {
+        font-size: 112%;
+    }
+}
+
+/* large screens (1024px) */
+@media (min-width: 1024px) {
+    html {
+        font-size: 120%;
+    }
+}
