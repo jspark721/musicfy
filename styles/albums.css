@@ -1,0 +1,56 @@
+body {
+    background: var(--darkblue);
+}
+.albums-background {
+    background-image: url(../assets/images/blurred_backgrounds/blur_bg_1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    opacity: .4;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.album-covers {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 2.2em;
+}
+
+.album-container {
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.album-container .caption {
+    margin-top: 10px;
+    text-decoration: none;
+}
+.caption a {
+    text-decoration: none;
+    color: var(--beige);
+}
+.album-container .caption p {
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--beige);
+    text-transform: uppercase;
+    line-height: 1.2rem;
+
+}
+
+.album-container .caption a.album-name {
+    color: white;
+    font-weight: 800;
+    letter-spacing: .07rem;
+    font-size: 1rem;
+}
+
+.album-container img {
+    width: 80%;
+}
