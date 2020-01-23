@@ -1,0 +1,92 @@
+body.album{
+    background: var(--purple);
+    background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.bg-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #616675;
+    opacity: .5;
+    position: absolute;
+}
+
+.album-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.album-cover-art {
+    position: relative;
+    left: 20%;
+    width: 70%;
+}
+
+.album-info {
+    position: relative;
+    top: 1.5rem;
+    padding: 1.5rem;
+}
+
+.album-info h2, h3, h5 {
+    margin: 0 0 7px 0;
+    font-weight: 700;
+    color: var(--beige);
+}
+
+.album-view-details .album-view-title{
+    font-size: 2rem;
+}
+.album-view-details .album-view-artist {
+    font-size: 1.5rem;
+}
+.album-view-details .album-view-release-info {
+    font-size: 0.75rem;
+}
+
+.album-view-song-list {
+    width: 90%;
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 0.8rem;
+    border-collapse: collapse;
+    color: var(--lightgray);
+}
+
+.album-view-song-item {
+    height: 3rem;
+    border-bottom: 1px solid var(--beige);
+}
+
+.song-item-number {
+    width: 5%;
+}
+.song-item-title {
+    width: 85%;
+}
+.sont-item-duration: {
+    width: 5%;
+}
+
+@media (max-width: 640px) and (min-width: 320px) {
+    .album-container {
+        grid-template-columns: 1fr;
+    }
+    .album-cover-art {
+        left: 0;
+        width: 70%;
+    }
+    .album-info {
+        text-align: center;
+    }
+    .album-view-song-list {
+        margin-left: 5%;
+    }
+    .album-view-title {
+        margin-top: 0;   
+    }
+}

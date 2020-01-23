@@ -4,7 +4,7 @@
     --lightgray: #DDD6DD;
     --pink:      #F0BABA;
     --blue:      #93B0D2;
-    --pastelblue:rgb(179, 181, 206);
+    --pastelblue:#b3b5ce;
     --darkblue:  #7B86A6;
     --purple:    #A498AC;
 }
@@ -73,6 +73,10 @@ body.homepage {
 .container {
     margin: 0 auto;
     max-width: 64rem;
+}
+
+.container.narrow {
+    max-width: 55rem;
 }
 
 .hero-content {
