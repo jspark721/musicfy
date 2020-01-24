@@ -81,7 +81,7 @@ body.homepage {
 
 .hero-content {
     position: relative;
-    min-height: 480px;
+    min-height: 600px;
     background-image: url(../assets/images/background.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -126,12 +126,12 @@ body.homepage {
     -webkit-transform: scaleX(0.9) translateY(3rem);
     -moz-transform: scaleX(0.9) translateY(3rem);
     transform: scaleX(0.9) translateY(3rem);
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .desc h5 {
