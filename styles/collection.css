@@ -1,8 +1,10 @@
 body {
     background: var(--darkblue);
+    overflow-x: hidden;
 }
 .collection-background {
-    background-image: url(../assets/images/blurred_backgrounds/blur_bg_1.jpg);
+    margin-top: 78px;
+    background-image: url('../assets/images/blurred_backgrounds/blur_bg_1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -18,7 +20,7 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 2.2em;
+    margin: 0 1.5em;
 }
 
 .collection-container {
