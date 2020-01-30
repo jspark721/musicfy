@@ -2,11 +2,11 @@
 :root {
     --beige:     #fce5dd;
     --lightgray: #DDD6DD;
-    --pink:      #F0BABA;
-    --blue:      #93B0D2;
+    --pink:      #f0baba;
+    --blue:      #93b0d2;
     --pastelblue:#b3b5ce;
-    --darkblue:  #7B86A6;
-    --purple:    #A498AC;
+    --darkblue:  #7b86a6;
+    --purple:    #a498ac;
 }
 
 *, *::before, *::after {
