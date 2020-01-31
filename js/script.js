@@ -10,7 +10,10 @@ let animateDescBox = function(box) {
     };
 
     for(let i = 0; i < boxArray.length; i++) {
-        revealBox(i);
+        setTimeout(function timer() {
+            revealBox(i);
+            console.log('reveal box');
+        }, i * 200);
     }
 };
 
