@@ -9,6 +9,7 @@ body.album{
     background-size: cover; */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-bottom: 150px;
 }
 
 .album-container {
@@ -31,16 +32,14 @@ body.album{
     padding: 1.5rem;
 }
 
-.album-info h2, h3, h5 {
-    margin: 0 0 7px 0;
-    color: var(--beige);
-}
 .album-view-title{
     font-size: 1.8rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgba(0,0,0, .2);
+    margin: 0 0 7px 0;
+    color: var(--beige);
 }
 .album-view-artist {
     font-size: .9rem;
@@ -48,11 +47,15 @@ body.album{
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0,0,0, .2);
+    margin: 0 0 7px 0;
+    color: var(--beige);
 }
 .album-view-release-info {
     font-size: 0.8rem;
     font-weight: 400;
     text-shadow: 1px 1px 1px rgba(0,0,0, .2);
+    margin: 0 0 7px 0;
+    color: var(--beige);
 }
 
 .album-view-song-list {
@@ -110,7 +113,148 @@ tbody:nth-child(odd) {
     line-height: 28px;
 }
 
-@media (max-width: 640px) and (min-width: 320px) {
+/*player bar css*/
+
+.player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background-color: rgba(255,255,255, .3);
+    z-index: 10;
+}
+
+.player-bar a {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.player-bar a,
+.player-bar a:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.player-bar .container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 90%;
+    min-height: 100%;
+    justify-content: space-between;
+}
+.player-bar .control-group {
+ 
+}
+.player-bar .main-controls {
+    width: 25%;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+.player-bar .main-controls .previous {
+    margin-right: 16.5%;
+}
+.player-bar .main-controls .play-pause {
+    margin-right: 15%;
+    font-size: 1.5rem;
+}
+
+.player-bar .currently-playing {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.player-bar .currently-playing .song-name,
+.player-bar .currently-playing .artist-name,
+.player-bar .currently-playing .artist-song-mobile {
+    text-align: center;
+    font-size: .8rem;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.player-bar .currently-playing .song-name,
+.player-bar .currently-playing .artist-song-mobile {
+    margin-bottom: 15px;
+}
+
+.player-bar .currently-playing .artist-song-mobile {
+    display: none;
+}
+
+.seek-control {
+    position: relative;
+    font-size: 0.8rem;
+}
+.seek-control .current-time {
+    position: absolute;
+    top: 0.7rem;
+    font-size: .7rem;
+}
+.seek-control .total-time {
+    position: absolute;
+    right: 0;
+    top: 0.7rem;
+    font-size: .7rem;
+}
+.seek-bar {
+    height: 0.25rem;
+    background-color: rgba(255,255,255, .4);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+.seek-bar .fill {
+    background-color: #ffffff;
+    width: 36%;
+    height: 0.25rem;
+    border-radius: 2px;
+}
+.seek-bar .thumb {
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: #ffffff;
+    left: 36%;
+    top: 50%;
+    margin-left: -0.25rem;
+    margin-top: -0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+.seek-bar:hover .thumb {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: -0.5rem 0;
+}
+
+.player-bar .volume {
+    width: 25%;
+    text-align: right;
+}
+
+.player-bar .volume .icon {
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px
+}
+.player-bar .volume .seek-bar {
+    display: inline-block;
+    width: 5.75rem;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 640px) and (min-width: 320px) {
     .album-container {
         grid-template-columns: 1fr;
     }
@@ -123,5 +267,48 @@ tbody:nth-child(odd) {
     }
     .album-view-title {
         margin-top: 0;   
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .player-bar {
+        height: 180px;
+    }
+    .player-bar .container {
+        display: block;
+        width: 100%;
+    }
+    .player-bar {
+        padding: 1rem;
+        background-color: rgba(123, 134, 166, .6);
+    }
+    .player-bar .main-controls,
+    .player-bar .currently-playing,
+    .player-bar .volume {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .player-bar .main-controls,
+    .player-bar .volume {
+        min-height: 3.7rem;
+        margin-top: 10px;
+    }
+    .player-bar .currently-playing {
+        min-height: 2.5rem;
+    }
+    .player-bar .artist-name,
+    .player-bar .song-name {
+        display: none;
+    }
+    .player-bar .currently-playing .artist-song-mobile {
+        display: block;
+        margin-top: 10px;
+    }
+    .player-bar .volume {
+        transform: scale(.9);
     }
 }
