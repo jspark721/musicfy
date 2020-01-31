@@ -35,6 +35,7 @@ body.homepage {
     padding: 0.5rem;
     background-color: rgba(179, 181, 206, .5);
     z-index: 1;
+    height: 70px;
 }
 .navbar .links-container {
     position: absolute;
@@ -63,11 +64,13 @@ body.homepage {
 
 .logo {
     position: relative;
-    left: 2rem; 
+    left: 1rem;
+    top: .4rem; 
     cursor: pointer;
 }
-.logo img {
-    width: 55px;
+.logo span {
+    color: var(--beige);
+    font-size: 1.7em;
 }
 
 .container {
