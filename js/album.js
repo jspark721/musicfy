@@ -32,7 +32,7 @@ let albumMarconi = {
 let createSongRow = function(songNumber, songName, songLength) {
     let template = 
         `<tr class="album-view-song-item">
-            <td class="song-item-number">${songNumber}</td>
+            <td class="song-item-number"><span class="ion-music-note"></span></td>
             <td class="song-item-title">${songName}</td>
             <td class="song-item-duration">${songLength}</td>
         </tr>`
@@ -59,6 +59,23 @@ let setCurrentAlbum = function(album) {
     }
 };
 
+let songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+let songRows = document.getElementsByClassName('album-view-song-item');
+
+let playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+
+    songListContainer.addEventListener('mouseover', function(event) {
+        if(event.target.parentElement.className === 'album-view-song-item') {
+            event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+        }
+    });
+
+    for(let i = 0; i < songRows.length; i++) {
+        songRows[i].addEventListener('mouseleave', function(event) {
+            this.children[0].innerHTML = '<span class="ion-music-note"></span>';
+        })
+    }
 };

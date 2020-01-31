@@ -1,24 +1,27 @@
 body.album{
     background: linear-gradient(217deg, rgba(82, 53, 128, 0.8), rgba(82, 53, 128,0) 70.71%),
-    linear-gradient(127deg, rgba(216, 166, 177, 0.8), rgba(252, 229, 221, 0) 70.71%),
-    linear-gradient(336deg, rgba(67, 129, 187, 0.8), rgba(31, 123, 209,0) 70.71%);
+    linear-gradient(336deg, rgba(216, 166, 177, 0.8), rgba(252, 229, 221, 0) 70.71%),
+    linear-gradient(127deg, rgba(67, 129, 187, 0.8), rgba(31, 123, 209,0) 70.71%);
     /* background-image: url('../assets/images/blurred_backgrounds/blur_bg_3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .album-container {
     position: relative;
+    width: 80%;
+    margin-left: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: flex-start;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
 .album-cover-art {
     position: relative;
-    left: 20%;
-    width: 70%;
+    width: 100%;
     top: 1.5%;
 }
 
@@ -53,13 +56,12 @@ body.album{
 }
 
 .album-view-song-list {
-    width: 90%;
-    margin: 1.5rem 0;
+    width: 75%;
+    margin: 1.5rem 11% 3rem 11%;
     font-weight: 500;
     font-size: .8rem;
     border-collapse: collapse;
     color: var(--beige);
-    text-shadow: 1px 1px 1px rgba(0,0,0, .2);
 }
 
 /* tbody:nth-child(even) {
@@ -75,15 +77,37 @@ tbody:nth-child(odd) {
 }
 
 .song-item-number {
-    width: 10%;
-    padding-left: 10px;
+    width: 1%;
+    min-width: 30px;
+    text-align: center;
 }
 .song-item-title {
-    width: 80%;
+    width: 95%;
+    padding-left: 15px;
 }
 .song-item-duration {
-    width: 10%;
-    padding-right: 10px;
+    width: 5%;
+    text-align: right;
+}
+
+.album-song-button {
+    text-align: center;
+    font-size: 13px;
+    background-color: var(--beige);
+    color: var(--blue);
+    border-radius: 50%;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    transition: all .3s ease;
+}
+.album-song-button:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--beige);
+}
+.album-song-button span {
+    line-height: 28px;
 }
 
 @media (max-width: 640px) and (min-width: 320px) {
@@ -92,13 +116,10 @@ tbody:nth-child(odd) {
     }
     .album-cover-art {
         left: 0;
-        width: 70%;
+        width: 40%;
     }
     .album-info {
         text-align: center;
-    }
-    .album-view-song-list {
-        margin-left: 5%;
     }
     .album-view-title {
         margin-top: 0;   
