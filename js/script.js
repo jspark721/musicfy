@@ -17,7 +17,7 @@ let animateDescBox = function(box) {
     }
 };
 
-window.onload = function() {
+$(window).load(function() {
     if(window.innerHeight > 950) {
         animateDescBox(boxArray);
     }
@@ -30,5 +30,5 @@ window.onload = function() {
             animateDescBox(boxArray);
         }
     })
-}
+});
 

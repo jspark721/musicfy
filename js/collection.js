@@ -11,7 +11,7 @@ let collectionAlbumTemplate =
             <br />
         </p>
     </div>
-</div>`
+</div>`;
 
 window.onload = function() {
     let collectionContainer = document.getElementsByClassName('collection-covers')[0];
