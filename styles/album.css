@@ -213,27 +213,33 @@ tbody:nth-child(odd) {
 }
 .seek-bar .fill {
     background-color: #ffffff;
-    width: 36%;
+    width: 0;
     height: 0.25rem;
     border-radius: 2px;
-    -webkit-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    transition: all .1s ease;
 }
 .seek-bar .thumb {
     position: absolute;
     height: 0.5rem;
     width: 0.5rem;
     background-color: #ffffff;
-    left: 36%;
+    left: 0;
     top: 50%;
     margin-left: -0.25rem;
     margin-top: -0.25rem;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all .1s ease-in-out;
-    -moz-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: width 100ms ease-in-out,
+                        height 100ms ease-in-out,
+                        margin-top 100ms ease-in-out,
+                        margin-left 100ms ease-in-out;
+    -moz-transition: width 100ms ease-in-out,
+                     height 100ms ease-in-out,
+                     margin-top 100ms ease-in-out,
+                     ßmargin-left 100ms ease-in-out;
+    transition: width 100ms ease-in-out,
+                height 100ms ease-in-out,
+                margin-top 100ms ease-in-out,
+                margin-left 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb {
@@ -249,7 +255,7 @@ tbody:nth-child(odd) {
     font-size: 1.1rem;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px
+    margin-right: 10px;
 }
 .player-bar .volume .seek-bar {
     display: inline-block;
