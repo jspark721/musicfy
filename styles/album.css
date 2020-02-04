@@ -216,6 +216,9 @@ tbody:nth-child(odd) {
     width: 36%;
     height: 0.25rem;
     border-radius: 2px;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    transition: all .1s ease;
 }
 .seek-bar .thumb {
     position: absolute;
@@ -228,14 +231,13 @@ tbody:nth-child(odd) {
     margin-top: -0.25rem;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
+
 .seek-bar:hover .thumb {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin: -0.5rem 0;
+    transform: scale(1.15);
 }
 
 .player-bar .volume {
